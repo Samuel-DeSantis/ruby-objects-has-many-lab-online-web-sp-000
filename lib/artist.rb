@@ -2,7 +2,7 @@ class Artist
   attr_accessor :name
 
   def initialize(name)
-    @name = name
+    @name = name #=> Initialized with a name
   end
 
   def add_song(song)
@@ -10,15 +10,15 @@ class Artist
   end
 
   def add_song_by_name(name)
-    song = Song.new(name)
-    song.artist = self
+    song = Song.new(name) #=> Initializes a Song with a name
+    song.artist = self #=> Associates the song and artist
   end
 
-  def songs
+  def songs #=> Returns an array with all songs by specified artist
     Song.all.select { |song| song.artist == self }
   end
 
-  def self.song_count
+  def self.song_count #=> Returns the total number of songs recorded
     Song.all.count
   end
 end
