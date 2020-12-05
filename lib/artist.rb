@@ -14,7 +14,7 @@ class Artist
   end
 
   def add_song(song)
-
+    song.artist = self #=> Passing in a Song object and adding the artist to that object
   end
 
   def add_song_by_name(name)
