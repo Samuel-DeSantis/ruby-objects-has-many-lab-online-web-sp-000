@@ -1,14 +1,9 @@
 class Artist
   attr_accessor :name
 
-  @@all = []
-
   def initialize(name)
     @name = name
-    @@all << self
   end
-
-
 
   def add_song(song)
     song.artist = self #=> Passing in a Song object and adding the artist to that object
