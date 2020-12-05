@@ -1,6 +1,6 @@
 class Author
 
-  attr_accessor :name, :posts
+  attr_accessor :name, :post
 
   @@all = []
 
@@ -13,6 +13,7 @@ class Author
   end
 
   def add_post(post)
-
+    @post = post
+    self.post = @post
   end
 end
